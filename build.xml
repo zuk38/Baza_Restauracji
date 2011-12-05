@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name= "Baza_Restauracji">
+	
+
+<property name="bin" value="bin"></property>
+<property name="jar" value="${bin}/jar"></property>
+
+<target name ="compile">
+<javac srcdir="src" destdir="bin" />
+</target>
+
+<target name="jar">
+<mkdir dir ="bin/jar"/>
+<jar destfile="${jar}/bazaRes.jar" basedir="bin" >
+<manifest>
+<attribute name="Main-Class" value="Main" />
+</manifest>
+</jar>
+</target>
+
+<target name ="run-jar">
+<java jar="${jar}/BazaRes.jar"/>
+</target>
+</project>
