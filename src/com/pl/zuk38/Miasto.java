@@ -40,11 +40,22 @@ public class Miasto {
 			nr++;
 			if(lista.getNazwaF().equals(tekst) || lista.getAdresF().equals(tekst)) {
 				System.out.println("Pozycja na liscie nr: " + nr);
-				System.out.println("Restauracja: " + lista.getNazwaF() + lista.getAdresF() + " znajdujaca sie w: " + getNazwa());
+				System.out.println("Restauracja: " + lista.getNazwaF() + " " + lista.getAdresF() + " znajdujaca sie w: " + getNazwa());
 			}			
 		}
 		return nr;
-		
+	}
+	
+	public int szukajKilku(String[] tab ){
+		int nr=-1;
+				for(Firmy lista: lokale){
+			nr++;
+			if(lista.getNazwaF().equals(tab[nr]) || lista.getAdresF().equals(tab[nr])) {
+				System.out.println("Pozycja na liscie nr: " + nr);
+				System.out.println("Restauracja: " + lista.getNazwaF() + " " + lista.getAdresF() + " znajdujaca sie w: " + getNazwa());
+			}			
+		}
+		return nr;
 	}
 	
 	public void edytuj(String doZmiany, String NowaWartosc){
